@@ -1,0 +1,170 @@
+<html>
+	<head>
+	  <!-- Favicons -->
+	  <title>Bookworm</title>
+	  <link href="client/img/favicon.png" rel="icon">
+	  <link href="client/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+	  <!-- Google Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+	  <!-- Bootstrap CSS File -->
+	  <link href="client/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  <link rel="stylesheet" href="client/bootstrap/others/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="client/bootstrap/others/css/bootstrap.min.css">
+	  <!-- Libraries CSS Files -->
+	  <link href="client/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	  <link href="client/lib/animate/animate.min.css" rel="stylesheet">
+	  <link href="client/lib/venobox/venobox.css" rel="stylesheet">
+	  <link href="client/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	  <link rel="stylesheet" href="client/css/main.css">
+
+	  <!-- Main Stylesheet File -->
+	  <link href="client/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="events"></div>
+
+		<!-- <script src="client/js/client.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript" src="client/js/add.js"></script>
+
+		<section id="intro">
+			<div id="loadField" class="loadingField">
+				<img src="client/img/worm.gif">
+			</div>
+
+			<div id="winField" class="loadingField" style="visibility: hidden;">
+				<a href="/"><img src="client/img/worm.gif"></a>
+				<p id="winnerName"></p>
+			</div>
+<<<<<<< HEAD
+			
+=======
+
+>>>>>>> c8add24d0206458c6d6cc541f003c83f23608f62
+			<div id="gameField" class="intro-container">
+				<div class="playField">
+					<div class="scene">
+						<img src="client/img/playfield.gif" class="scene-bg">
+
+					</div>
+
+					<div class="player1">
+						<div class="stats">
+							<img id="currentPlayerPic" class="character1" src="">
+							<p id="currentPlayerName" class="playerText1"></p>
+							<div id="currentPlayerId" class="lifeLine1">
+								<div id="" class="lifeStatus progress-bar progress-bar-striped active" role="progressbar"
+								aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+								</div>
+							</div> 
+						</div>
+						<div class="characterField">
+							<img id="currentPlayerChar" class="charOnPlay" src="">
+						</div>
+					</div>
+					<div class="player2">
+						<div class="stats">
+							<img id="opponentPic" class="character2" src="">
+							<p id="opponentName" class="playerText2"></p>
+							<div id="opponentId" class="lifeLine2">
+								<div id="" class="lifeStatus progress-bar progress-bar-striped active" role="progressbar"
+								aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+								<!-- 100 -->
+								</div>
+							</div> 
+						</div>
+						<div class="characterField">
+							<img id="opponentChar" class="charOnPlay" src="">
+						</div>
+					</div>
+
+					<div class="answerField">
+						<div id="message-container"></div>
+					</div>
+
+					<div class="rackField">
+						<div id="rack"></div>
+					</div>
+
+					<div class="msgField">
+						<div id="message-container"></div>
+					</div>
+
+					<div id="burst-12"></div>
+					<p id="score"></p>
+
+				</div>
+
+
+				<div class="letterField">
+					<div id="init-basket"></div>
+				</div>
+
+				<div id="legends">
+					<button class="letter-btn x2-btn">Double<br>Points</button>
+					<button class="letter-btn play-again-btn">Attack<br>Again</button>
+					<button class="letter-btn steal-life-btn">Steal<br>Life</button>
+				</div>
+
+				<div class="controls">
+					<div class="submit-control" id="submit-btn">
+						<a onclick="submitLetters()">
+							<img class="buttonIcons" src="client/img/icons/confirm.png">
+						</a>
+					</div>
+
+					<div class="refresh-control" id="refresh-basket-btn">
+						<a onclick="refreshBasket()">
+							<img class="buttonIcons" src="client/img/icons/refresh.png">
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<table id="table-to-clone" align="center">
+			<tr>
+				<td id="td1"></td>
+				<td id="td2"></td>
+				<td id="td3"></td>
+				<td id="td4"></td>
+				<td id="td5"></td>
+				<td id="td6"></td>
+			</tr>
+			<tr>
+				<td id="td7"></td>
+				<td id="td8"></td>
+				<td id="td9"></td>
+				<td id="td10"></td>
+				<td id="td11"></td>
+				<td id="td12"></td>
+			</tr>
+		</table>
+		<button id="button-to-clone"></button>
+	</body>
+
+
+
+
+
+	  <!-- JavaScript Libraries -->
+  <script src="client/lib/jquery/jquery.min.js"></script>
+  <script src="client/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="client/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="client/lib/easing/easing.min.js"></script>
+  <script src="client/lib/superfish/hoverIntent.js"></script>
+  <script src="client/lib/superfish/superfish.min.js"></script>
+  <script src="client/lib/wow/wow.min.js"></script>
+  <script src="client/lib/venobox/venobox.min.js"></script>
+  <script src="client/lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="client/js/main.js"></script>
+</html>

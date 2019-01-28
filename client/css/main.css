@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Pacifico');
+
+#rack button{
+	margin: 0 3px;
+}
+
+#rack{
+	min-height: 90px;
+	width: 80%;
+	/*border: 1px solid black;*/
+	text-align: center;
+	margin: 30px auto 40px;
+}
+
+#rack button {
+	margin: 0 6px;
+}
+
+td {
+	width: 90px;
+	height: 90px;
+	padding: 5px;
+}
+
+#submit-btn {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#refresh-basket-btn {
+	text-align: center;
+	padding-top: 20px;
+}
+
+#refresh-basket-btn button{
+	padding: 10px 15px;
+	font-size: 15px;
+	border-radius: 15px;
+}
+
+#button-to-clone{
+	display: none;
+}
+
+#table-to-clone{
+	display: none;
+}
+
+#message-container{
+	text-align: center;
+	margin: 30px 0 20px;
+	font-size: 30px;
+	height: 35px;
+	font-family: 'Pacifico', cursive;
+	color: white;
+}
+
+.rack-letter{
+	margin: ;
+}
+
+.letter-btn{
+	background: linear-gradient(#cc3300,#ff9f80);
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    font-size: 30px;
+    border: none;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    font-weight: bold;
+    color: white;
+}
+
+.letter-btn:hover{
+	background: linear-gradient(#cc3300,#ffe6cc);
+	color: #ddd;
+}
+
+.letter-btn:before {
+	content: attr(data-points);
+    font-size: 15px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    padding:5px;
+    line-height: 18px;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    background: linear-gradient(#ff4000,#ff9f80);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 1;
+}
+
+.letter-btn:disabled:before{
+	background: #999;
+}
+
+.letter-btn:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	border-radius: 13px 13px 0px 0px;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+	box-shadow: 0px 1px 4px -2px #333;
+}
+
+.letter-btn:disabled, 
+.x2-btn:disabled, 
+.play-again-btn:disabled,
+.steal-life-btn:disabled{
+	background: #999;
+}
+
+#score{
+	position: absolute;
+	margin-top: 193px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	font-size: 27px !important;
+	font-family: 'Bungee', cursive;
+	color: #665200 !important;
+}
+
+#burst-12 {
+	background: #e6b800;
+	width: 84px;
+	height: 84px;
+	position: absolute;
+	text-align: center;
+	left: calc(50% - 42px);
+	margin-top: 150px;
+	z-index: 1;
+	display: none;
+}
+#burst-12:before, #burst-12:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 84px;
+	width: 84px;
+	background: #e6b800;
+}
+#burst-12:before {
+	transform: rotate(30deg);
+}
+#burst-12:after {
+	transform: rotate(60deg);
+}
+
+.x2-btn{
+	background: linear-gradient(red,gold);
+}
+
+.x2-btn:hover{
+	background: linear-gradient(#ff0000,#ffe866);
+	color: #ddd;
+}
+
+.x2-btn:before{
+	background: linear-gradient(#ff4d4d,gold);
+}
+
+.play-again-btn{
+	background: linear-gradient(#260033,#ff00ff);
+}
+
+.play-again-btn:hover{
+	background: linear-gradient(#8600b3,#b3d1ff);
+	color: #ddd;
+}
+
+.play-again-btn:before{
+	background: linear-gradient(#260033,#ff00ff);
+}
+
+
+.steal-life-btn{
+	background: linear-gradient(#1a75ff,#3385ff);
+}
+
+.steal-life-btn:hover{
+	background: linear-gradient(#0047b3,#99c2ff);
+	color: #ddd;
+}
+
+.steal-life-btn:before{
+	background: linear-gradient(#0047b3,#80b3ff);
+}
+
+#legends {
+	display: none;
+	position: fixed;
+    bottom: 20;
+    right: 20;
+}
+
+#legends button{
+	font-size: 12px;
+	font-weight: bold;
+	width: 60px;
+	height: 60px;
+	color: black;
+	letter-spacing: 1px;
+	margin: 1px;
+}
+
+#legends button:before{
+	content: none;
+}
+
+#legends button:after{
+	background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.1));
+	height: 100%;
+}
+
+/***********************************/
+
+.inputField{
+	background: transparent;
+	border: none;
+	border-bottom: 1px gray solid;
+	color: gray;
+	text-align: center;
+}
+
+.userField{
+	display: inline;
+
+}
+
+.logoWorm{
+  width: 200px;
+  height: 200px;
+  margin-top: -80px;
+}
+
+.playField{
+	background-color: transparent;
+	border: 2px white solid;
+	border-radius: 10px;
+	width: 100%;
+	height: 320px;
+	margin-top: -150px;
+	position: absolute;
+	/*background: url(../img/playfield.jpg) top center;*/
+}
+
+.letterField{
+	/*background-color: black;*/
+	/*border: 2px white solid;*/
+	width: 50%;
+	height: 230px;
+	/*height: 300px;*/
+	position: absolute;
+	top: 350px;
+	padding: 20px;
+
+}
+
+.player1{
+	/*background-color: red;*/
+	width: 35%;
+	height: 100%;
+	position: absolute;
+	padding: 10px;
+}
+
+.player2{
+	/*background-color: blue;*/
+	width: 35%;
+	height: 100%;
+	position: absolute;
+	left: 65%;
+	padding: 10px;
+}
+
+.answerField{
+	/*background-color: yellow;*/
+	width: 30%;
+	height: 100%;
+	position: absolute;
+	left: 35%;
+}
+
+.character1{
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	border: 1px black solid;
+	margin-right: 400px;
+	background-color: white;
+}
+
+
+.character2{
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	border: 1px black solid;
+	margin-left: 390px;
+	background-color: white;
+}
+
+.stats{
+	width: 100%;
+	/*background-color: black;*/
+	padding: 3px;
+	height: 70px;
+}
+
+.playerText1{
+	font-size: 0.5em;
+	margin-top: -65px;
+	margin-right: 200px;
+}
+
+.playerText2{
+	font-size: 0.5em;
+	margin-top: -65px;
+	margin-left: 200px
+}
+
+.lifeLine1{
+	width: 80%; 
+	height: 20px;
+	border: 1px white solid;
+	margin-left: 70px;
+	margin-top: -30px;
+	border-radius: 15px;
+}
+
+.lifeLine2{
+	width: 80%; 
+	height: 20px;
+	border: 1px white solid;
+	margin-left: 20px;
+	margin-top: -30px;
+	border-radius: 15px;
+}
+
+.lifeStatus{
+	border-radius: 15px;
+}
+
+.characterField{
+	width: 100%;
+	height: 230px;
+	/*background-color: yellow;*/
+	margin-top: 48px
+}
+
+
+.charOnPlay{
+	width: 250px;
+	height: 200px
+}
+
+.buttonIcons{
+	width: 70px;
+	height: 70px
+}
+
+.controls{
+	position: absolute;
+	top: 560px;
+	/*background-color: maroon;*/
+	width: 50%;
+	visibility: hidden;
+}
+
+.submit-control{
+	float: left;
+	margin-left: 38%;
+	opacity: 0.7;
+	margin-top:13px;
+}
+
+.submit-control:hover{
+	opacity: 1
+}
+
+.refresh-control{
+	float: right;
+	margin-right: 38%;
+	opacity: 0.4;
+	margin-top:-5px;
+}
+
+.refresh-control:hover{
+	opacity: 0.7
+}
+
+.scene{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.scene-bg{
+	/*opacity: 0.7;*/
+	filter: brightness(50%);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.rackField{
+	position: absolute;
+	width: 100%;
+	margin-top:120px;
+}
+
+.msgField{
+	position: absolute;
+	width: 100%;
+	margin-top:50%;
+}
+
+.loadingField{
+	position: absolute;
+	left: 37%;
+	top: 20%;
+}
